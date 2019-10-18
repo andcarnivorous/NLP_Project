@@ -6,9 +6,14 @@ import scipy
 print("starting")
 
 
+# ARGPARSE FOR:
+# input file
+# Input sentence
+# Number of neighbors
 
 with open("natives.txt", "r") as f:
     f = f.readlines()
+
 
 nlp = spacy.load('en_core_web_md')
 
