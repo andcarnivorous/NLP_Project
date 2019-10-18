@@ -3,6 +3,8 @@ from nltk import word_tokenize
 from nltk.util import ngrams
 import pickle
 import argparse
+import spacy
+
 
 parser = argparse.ArgumentParser()
 #Change the Defaults to your preference.
@@ -33,10 +35,14 @@ def find_keyword(keyword, _list):
 
 with open("%s" % args.file, "r") as f:
     f = f.readlines()
-
+    
 sentences = [word_tokenize(x) for x in f]
 
+
+
 n_grams = [list(nltk.ngrams(x, args.grams)) for x in sentences]
+
+
 
 #Define keyword and grams. 
 find_keyword(args.keyword, n_grams)
