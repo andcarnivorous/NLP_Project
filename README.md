@@ -10,6 +10,13 @@ To replicate the results of the paper, you need:
 - sentencemaker.py
 - sent_vec.py
 
+N.B.: You need to have the en_core_web_md model from spacy installed. To install it run:
+
+```
+python3 -m spacy download en_core_web_md
+```
+
+
 ### To filter by keyword, the following command is used:
 ```
 python3 sent_vec.py --keyword="your_keyword_here"
