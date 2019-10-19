@@ -25,12 +25,12 @@ python3 sent_vec.py --POS="your_pos_here"
 python3 sent_vec.py --sentence="your_sentence_here"
 ```
 
-### To run the script in a different input file, use:
+### To run the script on a different input file, use:
 ```
 python3 sent_vec.py --file="your_file"
 ```
 
-The complete description of options can be checked by using the `-h` option like:
+### The complete description of options can be checked by using the `-h` option like:
 ```
 python3 sent_vec.py -h
 ```
