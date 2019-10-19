@@ -1,0 +1,8 @@
+pandas
+shutil
+nltk
+spacy  
+en_core_web_md (pretrained model from spacy)
+numpy
+scipy
+argparse
