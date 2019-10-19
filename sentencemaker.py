@@ -5,12 +5,15 @@ import spacy
 
 nlp = spacy.load('en_core_web_md')
 
+nlp.vocab["he"].is_stop = False
+nlp.vocab["she"].is_stop = False
 nlp.vocab["his"].is_stop = False
 nlp.vocab["her"].is_stop = False
 nlp.vocab["it"].is_stop = False
 nlp.vocab["him"].is_stop = False
-nlp.vocab["her"].is_stop = False
 nlp.vocab["hers"].is_stop = False
+nlp.vocab["himself"].is_stop = False
+nlp.vocab["herself"].is_stop = False
 
 path1 = 'natives'
 path2 = 'non-natives'
