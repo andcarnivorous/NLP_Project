@@ -15,23 +15,22 @@ To replicate the results of the paper, you need:
 python3 sent_vec.py --keyword="your_keyword_here"
 ```
 
-## To filter by POS, the following command is used:
+### To filter by POS, the following command is used:
 ```
 python3 sent_vec.py --POS="your_pos_here"
 ```
 
-## To filter by sentence (your sentence), use:
+### To filter by sentence (your sentence), use:
 ```
 python3 sent_vec.py --sentence="your_sentence_here"
 ```
 
-## To run the script in a different input file, use:
+### To run the script in a different input file, use:
 ```
 python3 sent_vec.py --file="your_file"
 ```
 
 The complete description of options can be checked by using the `-h` option like:
-
 ```
 python3 sent_vec.py -h
 ```
