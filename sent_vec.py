@@ -5,7 +5,6 @@ from scipy import spatial
 import scipy
 import argparse
 
-
 parser = argparse.ArgumentParser()
 #Change the Defaults to your preference.
 parser.add_argument('-f', '--file', default="natives.txt", help='dataset file')
@@ -58,13 +57,13 @@ def result(_list, f, keyword=False, PoS=False):
                     counter += 1
             if counter != 0:
                 posresult.append((x,y))
-
             
         return posresult
     
     else:
         return result
 
+    
 with open("natives.txt", "r") as f:
     f = f.readlines()
 
@@ -90,4 +89,3 @@ if len(args.keyword) < 1:
 
 for x,y in result(dis, f,PoS= args.POS, keyword=args.keyword):
     print(x, "\nCosine Distance:\t", y)
-
