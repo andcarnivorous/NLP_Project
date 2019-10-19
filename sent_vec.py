@@ -64,7 +64,7 @@ def result(_list, f, keyword=False, PoS=False):
         return result
 
     
-with open("natives.txt", "r") as f:
+with open(args.file, "r") as f:
     f = f.readlines()
 
 nlp = spacy.load('en_core_web_md')
