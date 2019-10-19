@@ -8,11 +8,11 @@ import argparse
 
 parser = argparse.ArgumentParser()
 #Change the Defaults to your preference.
-parser.add_argument('-f', '--file', default="natives.txt")
-parser.add_argument("--POS", default="")
-parser.add_argument("-k", "--keyword", default="")
-parser.add_argument("-s", "--sentence", default="plumbers are workers")
-parser.add_argument("-N", "--N", default=30)
+parser.add_argument('-f', '--file', default="natives.txt", help='dataset file')
+parser.add_argument("--POS", default="", help='Only return sentences with this PoS')
+parser.add_argument("-k", "--keyword", default="", help='Only return sentences with this keyword')
+parser.add_argument("-s", "--sentence", default="the president of the country", help='sentence from which to find closest sentences')
+parser.add_argument("-N", "--N", default=10, help='top N neighbor sentences to return.')
 args = parser.parse_args()
 
 #print(args.keyword)
@@ -72,7 +72,7 @@ nlp = spacy.load('en_core_web_md')
 
 print("loaded")
 
-vectors = [nlp(x) for x in f[:15000]] 
+vectors = [nlp(x) for x in f[:]] 
 
 vectors = [x.vector for x in vectors] 
 
@@ -86,8 +86,8 @@ if len(args.POS) < 1:
     args.POS = False
     
 if len(args.keyword) < 1:
-    args.keyword = False
-    
+    args.keyword = False    
 
-print(result(dis, f,PoS= args.POS, keyword=args.keyword))
+for x,y in result(dis, f,PoS= args.POS, keyword=args.keyword):
+    print(x, "\nCosine Distance:\t", y)
 
