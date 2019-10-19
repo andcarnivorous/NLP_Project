@@ -8,3 +8,9 @@ To replicate the results of the paper, you need:
 - sorter.py 
 - sentencemaker.py
 - sent_vec.py
+
+**Need to:** 
+
+**- add instructions on how to run the system from the command line,** 
+
+**- explain what variables can be changed/how to do that.** 
