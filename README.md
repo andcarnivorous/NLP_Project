@@ -9,6 +9,12 @@ To replicate the results of the paper, you need:
 - sentencemaker.py
 - sent_vec.py
 
+The complete description of options can be checked by using the `-h` option like:
+
+```
+python3 sent_vec.py -h
+```
+
 **Need to:** 
 
 **- add instructions on how to run the system from the command line,** 
