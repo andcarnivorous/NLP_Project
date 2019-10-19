@@ -10,11 +10,35 @@ To replicate the results of the paper, you need:
 - sentencemaker.py
 - sent_vec.py
 
+Filter by keyword
+
+```
+python3 sent_vec.py --keyword="your_keyword_here"
+```
+
+Filter by sentence (your sentence)
+
+```
+python3 sent_vec.py --sentence="your_keyword_here"
+```
+
+Filter by POS
+
+```
+python3 sent_vec.py --POS="your_pos_here"
+```
+Input file
+
+```
+python3 sent_vec.py --file="your_file"
+```
+
 The complete description of options can be checked by using the `-h` option like:
 
 ```
 python3 sent_vec.py -h
 ```
+
 
 **Need to:** 
 
