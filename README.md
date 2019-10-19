@@ -6,6 +6,7 @@ To replicate the results of the paper, you need:
 2. Extract the dataset into the main directory 
 3. Run the scripts in the following order:
 - sorter.py 
+- preprocessbawe.py
 - sentencemaker.py
 - sent_vec.py
 
