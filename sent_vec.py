@@ -5,7 +5,6 @@ from scipy import spatial
 import scipy
 import argparse
 
-
 parser = argparse.ArgumentParser()
 #Change the Defaults to your preference.
 parser.add_argument('-f', '--file', default="natives.txt")
@@ -58,13 +57,13 @@ def result(_list, f, keyword=False, PoS=False):
                     counter += 1
             if counter != 0:
                 posresult.append((x,y))
-
             
         return posresult
     
     else:
         return result
 
+    
 with open("natives.txt", "r") as f:
     f = f.readlines()
 
@@ -88,6 +87,4 @@ if len(args.POS) < 1:
 if len(args.keyword) < 1:
     args.keyword = False
     
-
 print(result(dis, f,PoS= args.POS, keyword=args.keyword))
-
