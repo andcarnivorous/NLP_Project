@@ -20,7 +20,6 @@ path2 = 'non-natives'
 path3 = "nativestok"
 paths = [path1,path2, path3]
 
-
 def remove_stopwords(sents):
     new_sentences = []
     for sent in sents:
@@ -28,8 +27,6 @@ def remove_stopwords(sents):
         sent = [token.text for token in doc if not token.is_stop and not token.is_punct]
         new_sentences.append(" ".join(sent))
     return new_sentences
-
-
 
 for x in paths:
     for f in os.listdir(x):
