@@ -12,7 +12,6 @@ import os
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-os.chdir("C:\\Users\\Tijev\\OneDrive\\Documenten\\School\\Natural Language Processing\\data")
 input_file = 'natives.txt'
 with open(input_file, 'rb') as f:
         for i,line in enumerate (f):
@@ -70,3 +69,11 @@ model.wv.most_similar(positive=w1, topn=6)
 model.wv.similarity(w1='president', w2='woman')
 model.wv.similarity(w1='president', w2='man')
 
+w1 = ""
+
+while w1 != "q":
+        w1 = input("Insert first word\n\n>>>")
+        w2 = input("Insert second word\n\n>>>")
+        operation = input("insert operation (addition or subtraction)")
+
+        print(subtracter(w1, w2, operation))
